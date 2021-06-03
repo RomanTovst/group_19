@@ -1,0 +1,65 @@
+1) Посмотреть где я-pwd 
+2) Создать папку-mkdir group_QA_19
+3) Зайти в папку-cd group_QA_19
+4) Создать 3 папки:
+/group_QA_19$ mkdir 1
+/group_QA_19$ mkdir 2
+/group_QA_19$ mkdir 3
+5) Зайти в любоую папку- /group_QA_19$ cd 3
+6) Создать 5 файлов (3 txt, 2 json)
+/group_QA_19/3$ touch Germany.txt
+/group_QA_19/3$ touch Poland.txt  
+/group_QA_19/3$ touch Belarus.txt
+/group_QA_19/3$ touch Russian.json
+/group_QA_19/3$ touch Ukraine.json
+7) Создать 3 папки
+/group_QA_19$ mkdir 4
+/group_QA_19$ mkdir 5
+/group_QA_19$ mkdir 6
+8. Вывести список содержимого папки-ls
+9) + Открыть любой txt файл- /group_QA_19/3$ nano Germany.txt
+10) + написать туда что-нибудь, любой текст.  5-3
+11) + сохранить и выйти. Ctrl + O, Ctrl + X
+12) Выйти из папки на уровень выше- cd group_QA_19
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+/group_QA_19$ mv 6 / 4
+/group_QA_19$ mv 5 / 4
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
+/group_QA_19/3$ cp Germany.txt 6/
+/group_QA_19/3$ cp Poland.txt 5/
+15) Найти файл по имени find -iname Belarus*
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+grep -n Linux Lin.txt
+17) вывести несколько первых строк из текстового файла - head -2 Germany.txt
+18) вывести несколько последних строк из текстового файла - tail -2 Germany.txt
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.- less Lin.txt
+20) вывести дату и время - date.
+=========
+
+Задание *
+1) Отправить http запрос на сервер - curl / https://api.quarantine.country/api/v1/regions
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+#!/bin/bash 
+#3
+cd group_QA_19_newscript
+#4
+mkdir 1
+mkdir 2
+mkdir 3
+#5
+cd 3
+#6
+touch Germany.txt
+touch Poland.txt 
+touch Belarus.txt
+touch Russian.json
+touch Ukraine.json
+#7
+mkdir 4
+mkdir 5
+mkdir 6
+#8
+ls
+#13
+mv 6 / 4
+mv 5 / 4
