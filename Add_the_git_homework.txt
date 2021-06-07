@@ -1,0 +1,90 @@
+1) Создать в Main текстовый файл, добавить туда текст
+2) Создать другую ветку
+3) Сделать изменения в текстовом файлев новой ветке
+4) Добавить, зкоммитить изменения
+5) Перейти в Main
+6) Вмержить новую ветку в Main
+9) Новую ветку запушить во внешний репозиториий
+10) Обновлённый Main запушить во внешний репозиторий .
+
+Инициалиализация git
+git init
+
+Добавление отдельных файлов для отслеживания, например README файла и .gitignore:
+git add README.md
+git add .gitignore
+
+Добавление всех файлов в git для отслеживания:
+git add .
+
+Первый коммит:
+git commit -m «first commit» [-m -сообщение; "first commit" - описание того, что было сделано]
+
+Проверка статуса изменения файлов в git
+git status
+
+Просмотр истории коммитов в git
+git log
+gitk
+
+Публиция файлов на удаленном сервере:
+git push -u repos branch [repos - название репозитория, branch - это ветка]
+
+Получение изменений на удаленном сервере
+git fetch repos [repos - имя удал. сервера]
+
+Клонирование удаленого репозитория git
+git clone git://github.com/schacon/ticgit.git
+
+Удалние файлов из отслеживаемых в git:
+git rm file_name [file_name - название файла]
+
+Удаление файлов из индекса git
+git rm --cached path_to_file [path_to_file - путь к файлу или папке]
+
+Добавление нового удаленного репозитория:
+git remote add short_rep_name https://github.com/path_to_rep [short_rep_name - название репозитория; https://github.com/path_to_rep - ссылка к перзиторию]
+
+Получение информации об удаленном сервере
+git remote show server_name [server_name - имя удал. сервера]
+
+Получение всех удаленных серверов git(имеется ввиду серверов, с которыми вы работаете.)
+git remote
+git remote -v [-v - доп. параметр, показывает ссылки на удаленный сервер]
+
+Переименовать удаленный реп.
+git remote rename old_name new_name [old_name - старое название; new_name - новое название]
+
+Удалить удаленный реп.
+git remote rm rep_name [rep_name - название реп. который следует удалить]
+
+Создание новой ветки в git
+git branch branch_name [branch_name - имя ветки]
+
+Переход на нужную ветку в git
+git checkout branch_name [branch_name - имя ветки]
+
+Создание новой ветки в git и моментальное переключение на нее
+git checkout -b branch_name [branch_name - имя ветки]
+
+Слияние(merge) веток в git
+git merge branch_name [branch_name - имя ветки]
+
+Удаление ветки в git
+git branch -d branch_name [branch_name - имя ветки]
+
+Изменение последнего коммита  в git [все три команды вместе дают один коммит — второй коммит заменяет результат первого.]
+git commit -m 'initial commit'
+git add forgotten_file
+git commit --amend
+
+Отмена индексации файла в git
+git reset HEAD file_name [file_name - название файла]
+
+Отмена изменений файла в git
+git checkout file_name [file_name - название файла]
+
+cd /path/to/my/repo
+git remote add origin ... — путь
+git push -u origin --all # pushes up the repo and its refs for the first time
+git push -u origin --tags # pushes up any tage
