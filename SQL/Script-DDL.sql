@@ -1,10 +1,10 @@
 --SQL_DDL
---Первая часть
---Создать таблицу employees
--- id. serial,  primary key,
+--First part
+--Create the employees table
+-- id. serial, primary key,
 -- employee_name. Varchar(50), not null
---Наполнить таблицу employee 70 строками.
- 
+--Fill the employee table with 70 rows.
+
 create table employees(
  id serial primary key,
  employee_name varchar(50) not null
@@ -83,12 +83,10 @@ values ('Roman'),
 		('Oleg'),
 		('Sofia');
 	
---Таблица salary
-
---Создать таблицу salary
--- id. Serial  primary key,
+--Create salary table
+-- id. serial key,
 -- monthly_salary. Int, not null
---Наполнить таблицу salary 15 строками:
+--Fill the salary table with 15 rows:
 -- 1000
 -- 1100
 -- 1200
